@@ -283,7 +283,7 @@ article {
 .bg-attach {
   height: 600px;
   width: 100%;
-  background-image: url("./images/bg.jpg");
+  background-image: url("images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
