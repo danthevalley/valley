@@ -21,12 +21,11 @@ const btnRight = document.querySelector(".flex-right");
 const btnLeft = document.querySelector(".flex-left");
 function carousel() {
   count++;
-
-  image.innerHTML = img[count];
-
   if (count > 3) {
     count = 0;
   }
+
+  return (image.innerHTML = img[count]);
 }
 
 // btnRight.addEventListener("click", (e) => {
@@ -82,8 +81,6 @@ const age = document.querySelector(".age");
 const name1 = document.querySelector(".name");
 const country = document.querySelector(".country");
 const description = document.querySelector(".desc2");
-const rightBtn = document.querySelector(`.fa-chevron-right`);
-const leftBtn = document.querySelector(`.fa-chevron-left`);
 const photo = document.querySelector(`.revImage`);
 const d = document.querySelectorAll(".d");
 
@@ -96,9 +93,9 @@ const reviewArr = [
     age: 29,
     country: "UAE",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Numquam laboriosam a, qui asperiores eveniet, est iusto
-            quibusdam, quisquam itaque deserunt id veritatis beatae
-            doloribus nemo sequi corrupti error eligendi officia?`,
+    Numquam laboriosam a, qui asperiores eveniet, est iusto
+    quibusdam, quisquam itaque deserunt id veritatis beatae
+    doloribus nemo sequi corrupti error eligendi officia?`,
     image: `<img src="./images/portraits/pexels-anna-nekrashevich-8993792.jpg" alt="a portrait"/>`,
   },
   {
@@ -107,9 +104,9 @@ const reviewArr = [
     age: 27,
     country: "minnesota, uk",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Numquam laboriosam a, qui asperiores eveniet, est iusto
-            quibusdam, quisquam itaque deserunt id veritatis beatae
-            doloribus nemo sequi corrupti error eligendi officia?`,
+    Numquam laboriosam a, qui asperiores eveniet, est iusto
+    quibusdam, quisquam itaque deserunt id veritatis beatae
+    doloribus nemo sequi corrupti error eligendi officia?`,
     image: `<img src="./images/portraits/pexels-tony-schnagl-5588224.jpg" alt="">`,
   },
   {
@@ -118,9 +115,9 @@ const reviewArr = [
     age: 46,
     country: "vienna, austria",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Numquam laboriosam a, qui asperiores eveniet, est iusto
-            quibusdam, quisquam itaque deserunt id veritatis beatae
-            doloribus nemo sequi corrupti error eligendi officia?`,
+    Numquam laboriosam a, qui asperiores eveniet, est iusto
+    quibusdam, quisquam itaque deserunt id veritatis beatae
+    doloribus nemo sequi corrupti error eligendi officia?`,
     image: `<img src="./images/portraits/pexels-polina-tankilevitch-5473070.jpg" alt="">`,
   },
 
@@ -130,9 +127,9 @@ const reviewArr = [
     age: 32,
     country: "mexico",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Numquam laboriosam a, qui asperiores eveniet, est iusto
-            quibusdam, quisquam itaque deserunt id veritatis beatae
-            doloribus nemo sequi corrupti error eligendi officia?`,
+    Numquam laboriosam a, qui asperiores eveniet, est iusto
+    quibusdam, quisquam itaque deserunt id veritatis beatae
+    doloribus nemo sequi corrupti error eligendi officia?`,
     image: ` <img src="./images/portraits/pexels-a-frame-in-motion-11346907.jpg" alt="">`,
   },
   {
@@ -141,15 +138,15 @@ const reviewArr = [
     age: 24,
     country: "nigeria",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-             Numquam laboriosam a, qui asperiores eveniet, est iusto
-            quibusdam, quisquam itaque deserunt id veritatis beatae
-            doloribus nemo sequi corrupti error eligendi officia?`,
+    Numquam laboriosam a, qui asperiores eveniet, est iusto
+    quibusdam, quisquam itaque deserunt id veritatis beatae
+    doloribus nemo sequi corrupti error eligendi officia?`,
     image: `     <img src="./images/portraits/pexels-muhammadtaha-ibrahim-ma'aji-10476512.jpg" alt="">`,
   },
 ];
-
 let count3 = 0;
-
+const rightBtn = document.querySelector(`.fa-chevron-right`);
+const leftBtn = document.querySelector(`.fa-chevron-left`);
 rightBtn.addEventListener("click", () => {
   if (count3 === reviewArr.length - 1) {
     count3 = 0;
@@ -165,17 +162,22 @@ rightBtn.addEventListener("click", () => {
   // description.textContent = reviewArr[count3].description;
   // photo.innerHTML = reviewArr[count3].image;
 
-  d.forEach((e) => {
+  return d.forEach((e) => {
     if (e.classList.contains("name")) {
       e.textContent = reviewArr[count3].name;
+      return;
     } else if (e.classList.contains("age")) {
       e.textContent = reviewArr[count3].age;
+      return;
     } else if (e.classList.contains("country")) {
       e.textContent = reviewArr[count3].country;
+      return;
     } else if (e.classList.contains("desc2")) {
       e.textContent = reviewArr[count3].description;
+      return;
     } else {
       e.innerHTML = reviewArr[count3].image;
+      return;
     }
   });
 });
@@ -189,11 +191,11 @@ leftBtn.addEventListener("click", () => {
 
   // 'this code works too'
 
-  // name1.textContent = reviewArr[count3].name;
-  // age.textContent = reviewArr[count3].age;
-  // country.textContent = reviewArr[count3].country;
-  // description.textContent = reviewArr[count3].description;
-  // photo.innerHTML = reviewArr[count3].image;
+  name1.textContent = reviewArr[count3].name;
+  age.textContent = reviewArr[count3].age;
+  country.textContent = reviewArr[count3].country;
+  description.textContent = reviewArr[count3].description;
+  photo.innerHTML = reviewArr[count3].image;
 
   d.forEach((e) => {
     if (e.classList.contains("name")) {
@@ -209,4 +211,22 @@ leftBtn.addEventListener("click", () => {
     }
   });
 });
-console.log(d);
+
+// const valley = [1, 2, 3, 4, 3, 2, 1, 3, 2, 2];
+
+// for (const each of valley) {
+//   if (each % 2 === 0) {
+//     continue;
+//   }
+//   console.log(each);
+// }
+
+const x = document.querySelector(".x");
+const cartBox = document.querySelector(".cart-box-hidden");
+const cartIcon = document.querySelector(".fa-cart-shopping");
+let id = new Date().getMilliseconds();
+x.addEventListener("click", (e) => cartBox.classList.toggle("cart-box-show"));
+cartIcon.addEventListener("click", (e) =>
+  cartBox.classList.add("cart-box-show")
+);
+
