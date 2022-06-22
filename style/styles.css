@@ -287,7 +287,7 @@ article {
 .bg-attach {
   height: 600px;
   width: 100%;
-  background-image: url("images/bg.jpg");
+  background-image: url("./images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -303,15 +303,7 @@ article {
   transition: ease 1.5s;
   animation: slide 2s alternate;
 }
-@keyframes slide {
-  0% {
-    transform: translateX(-300%);
-  }
 
-  100% {
-    transform: translateX(0);
-  }
-}
 img {
   width: 180px;
   height: 200px;
@@ -320,6 +312,15 @@ img {
   top: 25%;
   box-shadow: 0 0 15px 1px black;
   animation: slide 2s alternate;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-300%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 .desc {
   width: 400px;
@@ -478,7 +479,7 @@ img {
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px 3px black;
-  background-image: url(images/pexels-jeffry-surianto-11644229.jpg);
+  background-image: url(./images/pexels-jeffry-surianto-11644229.jpg);
   background-repeat: no-repeat;
   text-transform: capitalize;
 }
