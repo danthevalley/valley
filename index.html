@@ -14,7 +14,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- styles -->
-    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="stylesheet" href="/style/styles.css" />
   </head>
   <body>
     <header>
@@ -31,8 +31,10 @@
         <div class="nav">
           <li class="nav-items"><a href="">bookings</a></li>
         </div>
+        <div class="nav"><i class="fa-solid fa-cart-shopping"></i></div>
       </div>
     </header>
+    <div class="wedge"></div>
     <div class="explore">
       <!-- <div
         style="margin-left: auto; margin-right: auto; width: 500px"
@@ -85,7 +87,7 @@
               <h2 class="age d">29</h2>
               <h3 class="country d">UAE</h3>
             </div>
-            <div class="desc2 d d2">
+            <div class="desc2 d d2 value">
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Numquam laboriosam a, qui asperiores eveniet, est iusto
@@ -95,42 +97,119 @@
             </div>
           </div>
         </div>
-        <div class="btn">
+        <div class="btn reset increase decrease first-counter second-counter">
           <i class="fa-solid fa-chevron-left"></i>
 
           <i class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
     </div>
-
-    <article>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          provident saepe, atque consectetur harum libero autem magnam
-          praesentium vero impedit aspernatur pariatur doloribus, excepturi
-          aperiam temporibus voluptas dolor sequi iure. Tempore aliquam saepe
-          quae expedita eius cupiditate itaque accusamus vel error explicabo.
-          Repudiandae iste hic fugiat, voluptatibus nemo maiores? Ut quo,
-          assumenda labore magnam amet ipsam sit consectetur ad non. Perferendis
-          rem in obcaecati pariatur dignissimos temporibus. Cupiditate quibusdam
-          sed pariatur et nam, sit porro qui numquam, tempora amet aliquid
-          ratione molestiae quod sunt eligendi doloremque distinctio quo, velit
-          est? Nobis nesciunt doloremque magni quae maxime qui temporibus, id
-          aperiam error beatae maiores eos esse quos similique distinctio neque
-          et dicta repellendus ab facilis deserunt, harum velit reiciendis. Ea,
-          ducimus? Minus harum eius tempora nulla rem temporibus quam, nisi
-          nesciunt consectetur vero excepturi ipsa quae quaerat. Cum
-          exercitationem quidem atque illum consectetur corporis blanditiis
-          repellat numquam sed magnam. Dolorem, eum. Perferendis, magni commodi.
-          Neque at cumque pariatur consequuntur ducimus ea ad accusantium.
-          Quisquam distinctio eligendi, necessitatibus, possimus cumque, in
-          autem aut natus earum id recusandae dolores eaque nulla. Odit, amet.
-        </p>
+    <div class="grid">
+      <div class="grid-content" data-id="">
+        <h1>basic</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">flight ticket</li>
+            <li class="items">hotel reservations</li>
+          </ul>
+        </div>
+        <h2>price: $<span>2000</span></h2>
+        <button class="cart">add to cart</button>
       </div>
-    </article>
+      <div class="grid-content" data-id="">
+        <h1>intermediary</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">flight ticket</li>
+            <li class="items">half football tickets</li>
+            <li class="items">hotel reservations</li>
+          </ul>
+        </div>
+        <h2>price: $<span>3600</span></h2>
+        <button class="cart">add to cart</button>
+      </div>
+      <div class="grid-content" data-id="">
+        <h1>classic</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">flight ticket</li>
+            <li class="items">full football tickets</li>
+            <li class="items">hotel reservations</li>
+          </ul>
+        </div>
+        <h2>price: $<span>5000</span></h2>
+        <button class="cart">add to cart</button>
+      </div>
+      <div class="grid-content" data-id="">
+        <h1>pro</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">visa processing</li>
+            <li class="items">flight ticket</li>
+            <li class="items">full football tickets</li>
+            <li class="items">hotel reservations</li>
+          </ul>
+        </div>
+        <h2>price: $<span>5500</span></h2>
+        <button class="cart">add to cart</button>
+      </div>
+      <div class="grid-content" data-id="">
+        <h1>advance</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">visa processing</li>
+            <li class="items">flight ticket</li>
+            <li class="items">full football tickets</li>
+            <li class="items">hotel reservations</li>
+            <li class="items">tour guide</li>
+          </ul>
+        </div>
+        <h2>price: $<span>6000</span></h2>
+        <button class="cart">add to cart</button>
+      </div>
+      <div class="grid-content" data-id="">
+        <h1>adventurer</h1>
+        <div class="grid-items">
+          <ul>
+            <li class="items">visa processing</li>
+            <li class="items">flight ticket</li>
+            <li class="items">full football tickets</li>
+            <li class="items">hotel reservations</li>
+            <li class="items">tour guide</li>
+            <li class="items">extra one week stay</li>
+          </ul>
+        </div>
+        <h2>price: $<span>7000</span></h2>
+        <button class="cart">add to cart</button>
+      </div>
+    </div>
+    <div class="cart-box-hidden">
+      <div class="x-box">
+        <button class="x">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="cart-content">
+        <div class="cart-items">
+          <div>
+            <h2 class="cart-content-head">classic</h2>
+          </div>
+          <div class="cart-line"></div>
+          <div>
+            <h4>
+              quantity: <span>1</span
+              ><span class="plus-btn"><i class="fa-solid fa-plus"></i></span>
+            </h4>
+            <h4>price: $<span>2000</span></h4>
+          </div>
+        </div>
+        <div>
+          <button class="checkout">checkout</button>
+        </div>
+      </div>
+    </div>
 
     <!-- javascript -->
-    <script src="appJs/app.js"></script>
+    <script src="/appJs/app.js"></script>
   </body>
 </html>
